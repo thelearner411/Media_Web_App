@@ -6,10 +6,11 @@
 
 
 {% block content %}
-<ul>
+
+<div id="category-grid">
   {% for category in categories %}
-    <li><a href="browse/{{category.id }}">{{ category.name }}</a></li>
+    <div id="{{category.name|lower}}-grid-item" class="category-grid-item center-text"><a href="browse/{{category.id }}" class="center-text">{{ category.name }}</a></div>
   {% endfor %}
-</ul>
+</div>
   
 {% endblock %}
