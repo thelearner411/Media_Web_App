@@ -114,6 +114,21 @@ a{
     background-image: url("media/entertainment-cover.jpg");
 }
 
+/* topnav*/
+
+#top-nav{
+    background-color: var(--darkgrey);
+    color: var(--offwhite);
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+#top-nav a{
+    color: var(--offwhite);
+    padding: 0px 40px;
+}
+
 /* article.html */
 
 #article-wrapper{
@@ -141,4 +156,32 @@ a{
 
 #article-content{
     font-family: "Raleway", sans-serif;
+}
+
+/* browse.html */
+
+#article-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    gap: 40px;
+    width: 300px;
+}
+
+#article-grid-item{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    width: 300px;
+}
+
+#article-grid-item-title{
+    color: var(--teal);
+    width: 300px;
+}
+
+#article-grid-item-description{
+    font-family: "Raleway", sans-serif;
+    text-align: justify;
+    width: 300px;
 }
