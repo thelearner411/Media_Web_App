@@ -12,7 +12,7 @@ def home(request):
     template = loader.get_template('index.html')
     return HttpResponse(template.render())
 
-def news(request):
+def categories(request):
     categories = Category.objects.all().values()
     template = loader.get_template('categories.html')
     context = {
