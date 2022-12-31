@@ -38,3 +38,11 @@ def testing(request):
     'categories': ['Technology', 'Health', 'Culture', 'Politics', 'Sports', 'Entertainment'],   
   }
   return HttpResponse(template.render(context, request))
+
+def article(request, id):
+    article = Article.objects.get(id=id)
+    template = loader.get_template('article.html')
+    context = {
+        'article': article,
+    }
+    return HttpResponse(template.render(context, request))

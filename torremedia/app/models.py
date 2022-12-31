@@ -16,7 +16,7 @@ class Article(models.Model):
     writer = models.CharField(max_length=255, null=False)
     content = models.TextField(max_length=200000, null=False)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    coverImg = models.ImageField(null=False)
+    coverImg = models.ImageField(upload_to="static/media/article-imgs/", null=False)
     createdAt = models.DateTimeField(auto_now_add=True, null=False)
     updatedAt = models.DateTimeField(auto_now=True)
 
