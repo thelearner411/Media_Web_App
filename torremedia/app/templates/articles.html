@@ -1,0 +1,16 @@
+{% extends "master.html" %}
+
+{% block title %}
+  {{ category }}
+{% endblock %}
+
+
+{% block content %}
+
+<div id="article-grid">
+  {% for article in articles %}
+  <a href="/">{{ article.title }}</a>
+  {% endfor %}
+</div>
+  
+{% endblock %}

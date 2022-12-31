@@ -22,9 +22,14 @@ def categories(request):
 
 def browse(request, id):
     category = Category.objects.get(id=id)
+    categories = Category.objects.all().values()
+    articles = Article.objects.filter(category=id)
+
     template = loader.get_template('browse.html')
     context = {
         'category': category,
+        'categories': categories,
+        'articles': articles,
     }
     return HttpResponse(template.render(context, request))
 
