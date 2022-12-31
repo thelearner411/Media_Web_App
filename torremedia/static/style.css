@@ -41,6 +41,11 @@ a{
     text-align: center;
 }
 
+.center-image{
+    display: block;
+    margin: auto;
+}
+
 #header-link{
     color: var(--offwhite);
 }
@@ -107,4 +112,33 @@ a{
 #entertainment-grid-item{
     /* Image source: https://unsplash.com/photos/ZhQCZjr9fHo */
     background-image: url("media/entertainment-cover.jpg");
+}
+
+/* article.html */
+
+#article-wrapper{
+    text-align: justify;
+    width: 70%;
+}
+
+#article-category{
+    color: var(--teal);
+}
+
+#article-date{
+    font-family: "Raleway", sans-serif;;
+}
+
+#article-image{
+    border: solid transparent 1px;
+    border-radius: 20px;
+}
+
+#article-description{
+    color: var(--teal);
+    font-weight: 900;
+}
+
+#article-content{
+    font-family: "Raleway", sans-serif;
 }
