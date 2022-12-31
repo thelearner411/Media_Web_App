@@ -1,0 +1,144 @@
+:root{
+    --darkgrey: rgb(30, 30, 30);
+    --offwhite: rgb(230, 230, 230);
+    --teal: rgb(27, 146, 140);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Tahoma", sans-serif;
+    font-size: 20px;
+}
+
+header{
+    background: linear-gradient(to right, var(--darkgrey), var(--teal));
+    color: var(--offwhite);
+    padding: 20px;
+}
+
+footer{
+    background-color: var(--darkgrey);
+    color: var(--offwhite);
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--darkgrey);
+    cursor: pointer;
+}
+
+.content{
+    margin: 50px;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.center-image{
+    display: block;
+    margin: auto;
+}
+
+#header-link{
+    color: var(--offwhite);
+}
+
+#category-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: auto;
+    background-color: var(--darkgrey);
+    padding: 50px;
+    width: max-content;
+    gap: 50px;
+}
+
+.category-grid-item{
+    background-color: var(--teal);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--offwhite);
+    font-size: 40px;
+    font-weight: 900;
+    text-transform: uppercase;
+    height: 400px;
+    width: 500px;
+    line-height: 400px;
+    cursor: pointer;
+}
+
+.category-grid-item:hover{
+    transform: scale(1.1);
+}
+
+.category-grid-item a{
+    -webkit-text-stroke: 2px var(--darkgrey);
+    color: var(--offwhite);
+}
+
+#technology-grid-item{
+    /* Image source: https://unsplash.com/photos/EUsVwEOsblE */
+    background-image: url("media/technology-cover.jpg");
+}
+
+#health-grid-item{
+    /* Image source: https://unsplash.com/photos/av4IfCZG8Ic */
+    background-image: url("media/health-cover.jpg");
+}
+
+#culture-grid-item{
+    /* Image source: https://unsplash.com/photos/gfVofr15ICc */
+    background-image: url("media/culture-cover.jpg");
+}
+
+#politics-grid-item{
+    /* Image source: https://unsplash.com/photos/o0kbc907i20 */
+    background-image: url("media/politics-cover.jpg");
+}
+
+#sports-grid-item{
+    /* Image source: https://unsplash.com/photos/3R4vPrSB1c4 */
+    background-image: url("media/sports-cover.jpg");
+}
+
+#entertainment-grid-item{
+    /* Image source: https://unsplash.com/photos/ZhQCZjr9fHo */
+    background-image: url("media/entertainment-cover.jpg");
+}
+
+/* article.html */
+
+#article-wrapper{
+    text-align: justify;
+    width: 70%;
+}
+
+#article-category{
+    color: var(--teal);
+}
+
+#article-date{
+    font-family: "Raleway", sans-serif;;
+}
+
+#article-image{
+    border: solid transparent 1px;
+    border-radius: 20px;
+}
+
+#article-description{
+    color: var(--teal);
+    font-weight: 900;
+}
+
+#article-content{
+    font-family: "Raleway", sans-serif;
+}
