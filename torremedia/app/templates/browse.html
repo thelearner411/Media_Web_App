@@ -6,17 +6,7 @@
 
 {% block topnav %}
 
-<div id="top-nav">
-
-  {% for category in categories %}
-
-  <a href="{{ category.id }}">{{ category.name }}</a>
-
-  {% endfor %}
-
-  <a href="/"></a>
-
-</div>
+{% include "top-nav.html" %}
 
 {% endblock %}
 
@@ -29,8 +19,8 @@
   {% for article in articles %}
   <div class="article-grid-item">
 
-    <a href="../../article/{{ article.id }}" id="article-grid-item-title">{{ article.title }}</a><br><br>
-    <a href="../../article/{{ article.id }}"><img src="{{ article.coverImg.url }}" alt="{{ article.coverImg }}" height="200" width="300" 
+    <a href="/article/{{ article.id }}" id="article-grid-item-title">{{ article.title }}</a><br><br>
+    <a href="/article/{{ article.id }}"><img src="{{ article.coverImg.url }}" alt="{{ article.coverImg }}" height="200" width="300" 
     id="article-grid-item-image"></a><br><br>
     <p id="article-grid-item-description">{{ article.description }}</p>
 

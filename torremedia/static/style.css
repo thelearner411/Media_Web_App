@@ -21,10 +21,26 @@ header{
     padding: 20px;
 }
 
+/* footer.html */
+
 footer{
     background-color: var(--darkgrey);
     color: var(--offwhite);
     padding: 20px;
+}
+
+#footer-year{
+    color: var(--offwhite);
+}
+
+#social-media-footer-div{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+#social-media-footer-div a{
+    padding: 0px 10px;
 }
 
 a{
