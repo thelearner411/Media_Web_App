@@ -1,0 +1,9 @@
+<div id="top-nav">
+
+    {% for category in categories %}
+  
+    <a href="/categories/browse/{{ category.id }}">{{ category.name }}</a>
+  
+    {% endfor %}
+    
+</div>

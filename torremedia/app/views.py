@@ -45,9 +45,11 @@ def testing(request):
   return HttpResponse(template.render(context, request))
 
 def article(request, id):
+    categories = Category.objects.all().values()
     article = Article.objects.get(id=id)
     template = loader.get_template('article.html')
     context = {
+        'categories': categories,
         'article': article,
     }
     return HttpResponse(template.render(context, request))
