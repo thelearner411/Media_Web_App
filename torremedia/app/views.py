@@ -20,6 +20,17 @@ def categories(request):
     }
     return HttpResponse(template.render(context, request))
 
+def browseall(request):
+    categories = Category.objects.all().values()
+    articles = Article.objects.all()
+
+    template = loader.get_template('browseall.html')
+    context = {
+        'categories': categories,
+        'articles': articles,
+    }
+    return HttpResponse(template.render(context, request))
+
 def browse(request, id):
     category = Category.objects.get(id=id)
     categories = Category.objects.all().values()

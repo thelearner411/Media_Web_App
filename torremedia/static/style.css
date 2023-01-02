@@ -1,5 +1,6 @@
 :root{
     --darkgrey: rgb(30, 30, 30);
+    --mediumgrey: rgb(80, 80, 80);
     --offwhite: rgb(230, 230, 230);
     --teal: rgb(27, 146, 140);
 }
@@ -12,7 +13,7 @@
 
 body{
     font-family: "Tahoma", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 header{
@@ -64,6 +65,25 @@ a{
 
 #header-link{
     color: var(--offwhite);
+}
+
+/* categories.html */
+
+#browse-all-button{
+    background-color: var(--darkgrey);
+    color: var(--offwhite);
+    cursor: pointer;
+    font-family: "Tahoma", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    padding: 20px;
+    border: none;
+    height: 100px;
+    width: 100%;
+}
+
+#browse-all-button:hover{
+    background-color: var(--mediumgrey);
 }
 
 #category-grid{
