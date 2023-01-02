@@ -7,6 +7,11 @@
 
 {% block content %}
 
+<button onclick="location.href = 'browse/all';" id="browse-all-button">Browse all articles >></button><br><br>
+
+
+<p id="browse-category-prompt" class="center-text">Or check out articles in a specific category.</p><br>
+
 <div id="category-grid">
   {% for category in categories %}
     <div id="{{category.name|lower}}-grid-item" class="category-grid-item center-text"><a href="browse/{{category.id }}" class="center-text">{{ category.name }}</a></div>
