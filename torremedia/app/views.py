@@ -22,7 +22,7 @@ def categories(request):
 
 def browseall(request):
     categories = Category.objects.all().values()
-    articles = Article.objects.all()
+    articles = Article.objects.all().order_by("-createdAt")
 
     template = loader.get_template('browseall.html')
     context = {
@@ -34,7 +34,7 @@ def browseall(request):
 def browse(request, id):
     category = Category.objects.get(id=id)
     categories = Category.objects.all().values()
-    articles = Article.objects.filter(category=id)
+    articles = Article.objects.filter(category=id).order_by("-createdAt")
 
     template = loader.get_template('browse.html')
     context = {
