@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from .models import Category
 from .models import Article
+import random
 
 
 def helloWorld(request):
@@ -50,9 +51,14 @@ def testing(request):
 def article(request, id):
     categories = Category.objects.all().values()
     article = Article.objects.get(id=id)
+    categoryArticles = list(Article.objects.filter(category=article.category.id))
+    recommendedArticles = random.sample(categoryArticles, 3)
+    while(article in recommendedArticles):
+        recommendedArticles = random.sample(categoryArticles, 3)
     template = loader.get_template('article.html')
     context = {
         'categories': categories,
         'article': article,
+        'recommendedArticles': recommendedArticles,
     }
     return HttpResponse(template.render(context, request))

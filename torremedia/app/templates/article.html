@@ -14,21 +14,20 @@
 
 <div id="article-wrapper">
 
-<a href="../categories/browse/{{article.category.id}}" id="article-category">{{article.category}}<a><br><br>
-
-<h2>{{article.title}}</h2><br>
-<p id="article-writer">{{ article.writer }}</p><br>
+<a href="/browse/{{article.category.id}}" id="article-category" class="center-text">{{article.category}}</a><br>
+<h2 class="center-text">{{article.title}}</h2><br>
+<p id="article-writer" class="center-text">{{ article.writer }}</p><br>
 {% if article.createdAt == article.updatedAt %}
-<p id="article-date">Created {{ article.createdAt }}</p><br>
+<p id="article-date" class="center-text">Created {{ article.createdAt }}</p><br>
 {% else %}
-<p id="article-date">Created {{ article.createdAt }} | Last updated {{ article.updatedAt }}</p><br>
+<p id="article-date" class="center-text">Created {{ article.createdAt }} | Last updated {{ article.updatedAt }}</p><br>
 {% endif %}
 
 
 <div id="article-img-description">
 
-    <img src="{{ article.coverImg.url }}" alt="{{ article.coverImg }}" height="400" width="550" 
-    id="article-image"><br><br>
+    <img src="{{ article.coverImg.url }}" alt="{{ article.coverImg }}" height="330" width="550" 
+    id="article-image" class="center-image"><br><br>
 
     <p id="article-description">{{ article.description }}</p>
 
@@ -37,6 +36,29 @@
 
 
 <div id="article-content">{{ article.content|linebreaksbr }}</div>
+
+</div><br><br>
+
+<div id="recommended-articles-container">
+
+  <a href="/browse/{{article.category.id}}" id="more-articles-link" class="center-text">More in {{ article.category }}</a><br>
+
+  <div id="recommended-articles-wrapper">
+
+  {% for article in recommendedArticles %}
+
+  <div class="recommended-article-div">
+
+  <a href="/article/{{ article.id }}" class="recommended-article-title">{{ article.title }}</a><br><br>
+
+  <a href="/article/{{ article.id }}"><img src="{{ article.coverImg.url }}" alt="{{ article.coverImg }}" height="150" width="250" 
+    class="recommended-article-image"></a>
+
+  </div>
+
+  {% endfor %}
+
+  </div>
 
 </div>
   
