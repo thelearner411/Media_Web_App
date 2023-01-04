@@ -1,9 +1,36 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+    <title>Torre Media</title>
+</head>
+{% include "header.html" %}
+<body onload="loadDefaults()" id="index-body">
 
-<h1>Welcome to Torre Media!</h1>
-<p>Discover the latest news in technology, health, culture, politics, sports and entertainment!</p>
+<div class="content">
 
+<p class="center-text">Discover the latest news in technology, health, culture, politics, sports and entertainment!</p><br>
+
+<button onclick="location.href = 'browse/all';" id="browse-all-button">Browse all articles >></button><br><br>
+
+
+<p id="browse-category-prompt" class="center-text">Or check out articles in a specific category.</p><br>
+
+<div id="category-grid">
+  {% for category in categories %}
+    <div id="{{category.name|lower}}-grid-item" class="category-grid-item center-text"><a href="browse/{{category.id }}" class="center-text">{{ category.name }}</a></div>
+  {% endfor %}
+</div>
+
+</div>
 </body>
+{% include "footer.html" %}
 </html>

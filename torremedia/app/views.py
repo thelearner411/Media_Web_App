@@ -8,13 +8,9 @@ from .models import Article
 def helloWorld(request):
     return HttpResponse("Hello world!")
 
-def home(request):
-    template = loader.get_template('index.html')
-    return HttpResponse(template.render())
-
-def categories(request):
+def main(request):
     categories = Category.objects.all().values()
-    template = loader.get_template('categories.html')
+    template = loader.get_template('index.html')
     context = {
         'categories': categories,
     }
@@ -43,10 +39,6 @@ def browse(request, id):
         'articles': articles,
     }
     return HttpResponse(template.render(context, request))
-
-def main(request):
-    template = loader.get_template('main.html')
-    return HttpResponse(template.render())
 
 def testing(request):
   template = loader.get_template('template.html')
