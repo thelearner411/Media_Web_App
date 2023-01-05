@@ -55,6 +55,12 @@ header{
     color: var(--offwhite);
 }
 
+#header-link-flex{
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
 /* footer.html */
 
 footer{
