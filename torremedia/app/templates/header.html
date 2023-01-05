@@ -1,3 +1,14 @@
+{% load static %}
 <header>
-    <h1 class="center-text"><a href="/" id="header-link" class="center-text">Torre Media</a></h1>
+    <h1 class="center-text">
+        <a href="/" id="header-link" class="center-text">
+            <div id="header-link-flex">
+                <span>Torre</span>
+                <img src="{% static 'media/icons/tower-white.png' %}" 
+                alt="Torre Media Logo" height="50" width="50" 
+                id="header-logo-image" class="center-image">
+                <span> Media</span>
+            </div>
+        </a>
+    </h1>
 </header>
