@@ -14,7 +14,7 @@
 
 <div id="article-wrapper">
 
-<a href="/browse/{{article.category.id}}" id="article-category" class="center-text">{{article.category}}</a><br>
+<a href="/browse/{{article.category.id}}" id="article-category" class="{{article.category|lower}}-article-tag center-text">{{article.category}}</a><br>
 <h2 class="center-text">{{article.title}}</h2><br>
 <p id="article-writer" class="center-text">{{ article.writer }}</p><br>
 {% if article.createdAt == article.updatedAt %}

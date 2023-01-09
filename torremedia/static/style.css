@@ -6,6 +6,12 @@
     --mediumgrey: rgb(80, 80, 80);
     --offwhite: rgb(230, 230, 230);
     --teal: rgb(27, 146, 140);
+    --darkblue: rgb(0, 22, 109);
+    --darkgreen: rgb(15, 109, 0);
+    --gold: rgb(188, 147, 0);
+    --darkorange:rgb(182, 100, 0);
+    --burgundy: rgb(109, 0, 0);
+    --darkpurple: rgb(69, 0, 109);
 }
 
 *{
@@ -198,8 +204,41 @@ footer{
     align-items: center;
 }
 
-.article-grid-item-category{
-    color: var(--teal);
+.article-grid-item-category-div{
+    border: solid transparent 1px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.technology-browse-tag{
+    background-color: var(--darkblue);
+}
+
+.health-browse-tag{
+    background-color: var(--darkgreen);
+}
+
+.culture-browse-tag{
+    background-color: var(--gold);
+}
+
+.politics-browse-tag{
+    background-color: var(--darkorange);
+}
+
+.sports-browse-tag{
+    background-color: var(--burgundy);
+}
+
+.entertainment-browse-tag{
+    background-color: var(--darkpurple);
+}
+
+.article-grid-item-category-link{
+    display: block;
+    color: var(--offwhite);
+    padding: 10px;
+    width: 300px;
 }
 
 .article-grid-item-title{
@@ -228,6 +267,36 @@ footer{
 
 #article-category{
     display: block;
+    border: solid transparent 1px;
+    border-radius: 20px;
+    color: var(--offwhite);
+    margin: auto;
+    padding: 10px;
+    width: 200px;
+}
+
+.technology-article-tag{
+    background-color: var(--darkblue);
+}
+
+.health-article-tag{
+    background-color: var(--darkgreen);
+}
+
+.culture-article-tag{
+    background-color: var(--gold);
+}
+
+.politics-article-tag{
+    background-color: var(--darkorange);
+}
+
+.sports-article-tag{
+    background-color: var(--burgundy);
+}
+
+.entertainment-article-tag{
+    background-color: var(--darkpurple);
 }
 
 #article-date{

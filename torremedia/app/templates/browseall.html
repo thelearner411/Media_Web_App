@@ -19,7 +19,9 @@
   {% for article in articles %}
   <div class="article-grid-item">
 
-    <a href="/browse/{{ article.category.id }}" class="article-grid-item-category">{{ article.category }}</a><br><br>
+    <div class="article-grid-item-category-div {{article.category|lower}}-browse-tag">
+    <a href="/browse/{{ article.category.id }}" class="article-grid-item-category-link center-text">{{ article.category }}</a>
+    </div><br>
     <a href="/article/{{ article.id }}" class="article-grid-item-title">{{ article.title }}</a><br><br>
     <a href="/article/{{ article.id }}"><img src="{{ article.coverImg.url }}" alt="{{ article.coverImg }}" height="180" width="300" 
     class="article-grid-item-image"></a><br><br>
